@@ -6,7 +6,7 @@ gc.collect()
 import network
 sta_if = network.WLAN(network.STA_IF)
 sta_if.active(True)
-sta_if.connect('Fibertel WiFi175', '0042265604')
+sta_if.connect('<essid>', '<password>')
 
 while not sta_if.isconnected():
     pass
