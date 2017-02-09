@@ -13,7 +13,6 @@ def log_data():
     send_data('temperature', d.temperature())
     send_data('humidity', d.humidity())
 
-
 def send_data(key, value):
     url = aio_url % key
     json = {'value': value}
