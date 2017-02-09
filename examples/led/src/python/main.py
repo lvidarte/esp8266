@@ -1,7 +1,7 @@
 from machine import Pin
 from time import sleep
 
-pin = Pin(14, Pin.OUT)
+pin = Pin(16, Pin.OUT)
 
 while True:
     pin.high()
