@@ -11,7 +11,7 @@
 #include <ESP8266httpUpdate.h>
 
 // Config
-#define FIRMWARE_VERSION "firmware-v0.6"
+#define FIRMWARE_VERSION "firmware-v0.5"
 
 #define OTA_SERVER_HOST "192.168.0.20"
 #define OTA_SERVER_PORT 3000
@@ -39,7 +39,7 @@ void checkUpdate ()
         Serial.println("No update found.");
         break;
     case HTTP_UPDATE_OK:
-        Serial.println("Updated OK.");
+        Serial.println("Updated OK. Rebooting.");
         ESP.restart();
         break;
   }

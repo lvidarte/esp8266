@@ -1,14 +1,8 @@
 <?PHP
 
 const LOG_FILE = "ota.log";
-const FIRMWARE_DIR = "../firmware";
+const FIRMWARE_DIR = "../firmware/";
 
-
-$firmwares = scandir(FIRMWARE_DIR);
-
-$db = [
-    "5C:CF:7F:C0:3E:87" => basename(end($firmwares), FIRMWARE_DIR),
-];
 
 
 function logging($message)
@@ -43,9 +37,18 @@ function sendFile($path)
 }
 
 
-
-
 logging($_SERVER);
+
+$firmwares = scandir(FIRMWARE_DIR);
+
+logging($firmwares);
+
+$db = [
+    "5C:CF:7F:C0:3E:87" => basename(end($firmwares), '.bin'),
+];
+
+logging($db);
+
 
 header('Content-type: text/plain; charset=utf8', true);
 
@@ -72,7 +75,7 @@ if (
 
 if (isset($db[$_SERVER['HTTP_X_ESP8266_STA_MAC']])) {
     if ($db[$_SERVER['HTTP_X_ESP8266_STA_MAC']] != $_SERVER['HTTP_X_ESP8266_VERSION']) {
-        $file = "./bin/" . $db[$_SERVER['HTTP_X_ESP8266_STA_MAC']] . ".bin";
+        $file = FIRMWARE_DIR . $db[$_SERVER['HTTP_X_ESP8266_STA_MAC']] . '.bin';
         logging("Sending file " . $file);
         sendFile($file);
     } else {
