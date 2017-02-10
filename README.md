@@ -7,6 +7,7 @@
 3. [dht11](https://github.com/lvidarte/esp8266/tree/master/examples/dht11)
 4. [sdd1306](https://github.com/lvidarte/esp8266/tree/master/examples/sdd1306)
 5. [sdcard](https://github.com/lvidarte/esp8266/tree/master/examples/sdcard)
+6. [ota](https://github.com/lvidarte/esp8266/tree/master/examples/ota)
 
 ### NodeMCU
 
