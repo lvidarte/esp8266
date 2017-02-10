@@ -1,6 +1,7 @@
 # OTA (Over The Air)
 
-### Doc
+### Aditional Doc
 
 * [ESP8266 OTA Update](https://github.com/esp8266/Arduino/blob/master/doc/ota_updates/readme.md)
-* [PlatformIO OTA Update](https://github.com/platformio/platformio-examples/tree/develop/espressif/esp8266-arduino-ota)
+* [PlatformIO OTA Example](https://github.com/platformio/platformio-examples/tree/develop/espressif/esp8266-arduino-ota)
+
