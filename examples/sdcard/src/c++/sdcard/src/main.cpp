@@ -18,7 +18,6 @@
  located at different base addresses.
  */
 
-#include <Arduino.h>
 #include <SPI.h>
 #include <SD.h>
 

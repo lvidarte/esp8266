@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 
 #define NUM_PIXELS 10
