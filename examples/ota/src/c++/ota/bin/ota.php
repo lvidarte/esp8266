@@ -1,6 +1,6 @@
 <?PHP
 
-const LOG_FILE = "server.log";
+const LOG_FILE = "ota.log";
 const FIRMWARE_DIR = "../firmware";
 
 
