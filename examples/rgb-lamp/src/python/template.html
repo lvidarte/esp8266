@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RGBLamp</title>
+<style type="text/css">
+body {
+  background: #222;
+  color: #aaa;
+  font-family: monospace;
+}
+table, input, h1 {
+  font-size: 4em;
+}
+input[type=range] {
+  width: 1em;
+}
+#r_color, #g_color, #b_color {
+  width: 1em;
+  height: 1em;
+  background: #000;
+}
+#r_value, #g_value, #b_value {
+  min-width: 2em;
+}
+#rgb {
+  width: 4em;
+  height: 4em;
+  background: #000;
+  margin-left: .5em;
+}
+.box {
+  border: solid .1em #111;
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+}
+.btn {
+  color: #aaa;
+  font-size: 1em;
+  font-family: monospace;
+  background: #333;
+  padding: 10px 20px 10px 20px;
+  margin-top: .5em;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #000;
+  text-decoration: none;
+}
+</style>
+<script type="text/javascript">
+function showInfo() {
+  var r = document.forms[0].r.value;
+  var g = document.forms[0].g.value;
+  var b = document.forms[0].b.value;
+  showColor('r_color', 255, invertColor(r), invertColor(r));
+  showColor('g_color', invertColor(g), 255, invertColor(g));
+  showColor('b_color', invertColor(b), invertColor(b), 255);
+  showColor('rgb', r, g, b);
+  showValue('r_value', r);
+  showValue('g_value', g);
+  showValue('b_value', b);
+}
+function invertColor(value) {
+  return 255 - value;
+}
+function showColor(id, r, g, b) {
+  var rgb = 'rgb(' + r + ',' + g + ',' + b + ')';
+  document.getElementById(id).style.backgroundColor = rgb;
+}
+function showValue(id, value) {
+  document.getElementById(id).innerHTML = value
+}
+</script>
+</head>
+<body onload="showInfo();">
+<h1>RGBLamp</h1>
+<form>
+<table>
+<tr>
+  <td>Red</td>
+  <td><input type="range" name="r" min="0" max="255" value="%s" onchange="showInfo();" /></td>
+  <td><div id="r_value"></div></td>
+  <td><div id="r_color" class="box"></div></td>
+  <td rowspan="3"><div id="rgb" class="box"></div></td>
+</tr>
+<tr>
+  <td>Green</td>
+  <td><input type="range" name="g" min="0" max="255" value="%s" onchange="showInfo();" /></td>
+  <td><div id="g_value"></div></td>
+  <td><div id="g_color" class="box"></div></td>
+</tr>
+<tr>
+  <td>Blue</td>
+  <td><input type="range" name="b" min="0" max="255" value="%s" onchange="showInfo();" /></td>
+  <td><div id="b_value"></div></td>
+  <td><div id="b_color" class="box"></div></td>
+</tr>
+<tr>
+  <td colspan="5"><input type="submit" value="Set" class="btn box" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
