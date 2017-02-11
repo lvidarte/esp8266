@@ -1,0 +1,1 @@
+/home/lvidarte/src/lvidarte/esp8266/bin/envs/esptool/bin/esptool.py

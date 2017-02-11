@@ -8,6 +8,5 @@ then
     curl -O -J $FIRMWARE
 fi
 
-source esptool/env/bin/activate && \
-    esptool.py --port $PORT erase_flash && \
-    esptool.py --port $PORT write_flash -fm dio -fs 32m 0x00000 `basename $FIRMWARE`
+bin/esptool.py --port $PORT erase_flash && \
+bin/esptool.py --port $PORT write_flash -fm dio -fs 32m 0x00000 `basename $FIRMWARE`
