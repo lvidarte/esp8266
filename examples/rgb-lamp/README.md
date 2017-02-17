@@ -32,7 +32,6 @@ CH_PD (or EN) Chip enable. Should be high for normal operation.
 
 Pulse width modulation (PWM) is a way to get an artificial analog output on a digital pin. It achieves this by rapidly toggling the pin from low to high. There are two parameters associated with this: the frequency of the toggling, and the duty cycle.
 
-See the micropython doc  
-[https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/pwm.html](here).
+See the micropython doc [here](https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/pwm.html).
 
 ![pwm explained](https://raw.githubusercontent.com/lvidarte/esp8266/master/examples/rgb-lamp/pwm.gif)
