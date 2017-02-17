@@ -5,6 +5,8 @@ HTTP daemon for Micropython running on NodeMCU.
 
 @author Leo Vidarte <lvidarte@gmail.com>
 @date   22-08-2016
+
+PWM documentation: https://docs.micropython.org/en/latest/esp8266/esp8266/tutorial/pwm.html
 """
 
 import socket
@@ -32,13 +34,13 @@ class RGBLed:
         self.duty()
 
     def duty(self):
-        self.pin_r.duty(self.translate(self.r))
-        self.pin_g.duty(self.translate(self.g))
-        self.pin_b.duty(self.translate(self.b))
+        self.pin_r.duty(self.duty_translate(self.r))
+        self.pin_g.duty(self.duty_translate(self.g))
+        self.pin_b.duty(self.duty_translate(self.b))
 
-    def translate(self, n):
-        """translate values from 0-255 to 0-1000"""
-        return int((float(n) / 255) * 1000)
+    def duty_translate(self, n):
+        """translate values from 0-255 to 0-1023"""
+        return int((float(n) / 255) * 1023)
 
 
 def get_url(conn):
