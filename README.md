@@ -20,7 +20,16 @@
  * [Installation](http://docs.platformio.org/en/latest/ide/atom.html#installation)
  * [Getting started with PlatformIO and NodeMCU](https://www.losant.com/blog/getting-started-with-platformio-esp8266-nodemcu)
 
+### Phant IoT Server
+
+Phant is a modular logging tool developed by [SparkFun Electronics](https://www.sparkfun.com/) for collecting data from the Internet of Things. phant is the open source software that powers data.sparkfun.com.
+
+ * [http://phant.io/](http://phant.io)
+ * [https://github.com/sparkfun/phant](https://github.com/sparkfun/phant)
+
 ### Libraries
 
 * [Arduino core for ESP8266 WiFi chip](https://github.com/esp8266/Arduino)
 * [WifiManager](https://github.com/tzapu/WiFiManager)
+* [Phant Arduino](https://github.com/sparkfun/phant-arduino)
+* [Phant Python](https://github.com/matze/python-phant)
