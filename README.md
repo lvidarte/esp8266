@@ -16,6 +16,8 @@
 
 ### PlatformIO IDE for Atom
 
+PlatformIO IDE is the next-generation integrated development environment for IoT.
+
  * [http://platformio.org](http://platformio.org/)
  * [Installation](http://docs.platformio.org/en/latest/ide/atom.html#installation)
  * [Getting started with PlatformIO and NodeMCU](https://www.losant.com/blog/getting-started-with-platformio-esp8266-nodemcu)
