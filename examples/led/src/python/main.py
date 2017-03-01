@@ -1,10 +1,10 @@
 from machine import Pin
 from time import sleep
 
-pin = Pin(16, Pin.OUT)
+led = Pin(16, Pin.OUT)
 
 while True:
-    pin.high()
+    led.high()
     sleep(1)
-    pin.low()
+    led.low()
     sleep(1)

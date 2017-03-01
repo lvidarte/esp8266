@@ -1,14 +1,16 @@
-#define LED_PIN 16
+#include <Arduino.h>
+
+// D0 - Internal LED (GPIO16)
 
 void setup ()
 {
-  pinMode(LED_PIN, OUTPUT);
+  pinMode(D0, OUTPUT);
 }
 
 void loop ()
 {
-  digitalWrite(LED_PIN, HIGH);
+  digitalWrite(D0, HIGH);
   delay(1000);
-  digitalWrite(LED_PIN, LOW);
+  digitalWrite(D0, LOW);
   delay(1000);
 }
