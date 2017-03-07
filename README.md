@@ -4,7 +4,7 @@
 
 1. [led](https://github.com/lvidarte/esp8266/tree/master/examples/led)
 2. [button](https://github.com/lvidarte/esp8266/tree/master/examples/button)
-3. [neopixel](https://github.com/lvidarte/esp8266/tree/master/examples/neopixel)
+3. [neopixels](https://github.com/lvidarte/esp8266/tree/master/examples/neopixels)
 4. [dht11](https://github.com/lvidarte/esp8266/tree/master/examples/dht11)
 5. [sdd1306](https://github.com/lvidarte/esp8266/tree/master/examples/sdd1306)
 6. [sdcard](https://github.com/lvidarte/esp8266/tree/master/examples/sdcard)
