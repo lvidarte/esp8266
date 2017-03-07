@@ -11,4 +11,5 @@ cd bin && \
     ln -fs $(pwd)/envs/ampy/bin/ampy && \
     ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/rgb-lamp/src/python/bin/ampy && \
     ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/dht11/src/python/bin/ampy && \
+    ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/ap/src/python/bin/ampy && \
     cd ..
