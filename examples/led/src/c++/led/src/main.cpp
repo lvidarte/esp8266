@@ -9,6 +9,7 @@ void setup ()
 
 void loop ()
 {
+  // The internal LED turn on when the pin is LOW
   digitalWrite(D0, HIGH);
   delay(1000);
   digitalWrite(D0, LOW);
