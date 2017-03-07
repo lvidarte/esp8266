@@ -3,6 +3,8 @@
 PORT=${1:-/dev/ttyUSB0}
 FIRMWARE="http://micropython.org/resources/firmware/esp8266-20170108-v1.8.7.bin"
 
+echo "Using $PORT"
+
 if [ ! -f `basename $FIRMWARE` ]
 then
     curl -O -J $FIRMWARE

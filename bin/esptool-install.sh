@@ -8,4 +8,4 @@ cd bin && \
     pip install esptool && \
     deactivate && \
     cd .. && \
-    ln -s $(pwd)/envs/esptool/bin/esptool.py
+    ln -s $(pwd)/envs/esptool/bin/esptool.py 2>/dev/null
