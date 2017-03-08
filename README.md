@@ -11,6 +11,7 @@
 7. [ota](https://github.com/lvidarte/esp8266/tree/master/examples/ota)
 8. [ap](https://github.com/lvidarte/esp8266/tree/master/examples/ap)
 9. [rgb-lamp](https://github.com/lvidarte/esp8266/tree/master/examples/rgb-lamp)
+10. [sg90](https://github.com/lvidarte/esp8266/tree/master/examples/sg90)
 
 ### NodeMCU
 
