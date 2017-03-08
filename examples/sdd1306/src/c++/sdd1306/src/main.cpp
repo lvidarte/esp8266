@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <SSD1306.h>
 
 #define SDA 4

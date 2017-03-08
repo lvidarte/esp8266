@@ -1,17 +1,24 @@
 #include <Arduino.h>
+#include <Servo.h>
 
-// D0 - Internal LED (GPIO16)
+Servo servo;
 
 void setup ()
 {
-  pinMode(D0, OUTPUT);
+  servo.attach(14);
 }
 
 void loop ()
 {
-  // The internal LED turn on when the pin is LOW
-  digitalWrite(D0, HIGH);
+  // To 0°
+  servo.write(0);
   delay(1000);
-  digitalWrite(D0, LOW);
+
+  // To 90°
+  servo.write(90);
+  delay(1000);
+
+  // To 180°
+  servo.write(180);
   delay(1000);
 }
