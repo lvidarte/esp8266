@@ -1,4 +1,6 @@
-# esp8266
+# ESP8266 NodeMCU Workshop
+
+Check the [wiki](https://github.com/lvidarte/esp8266/wiki) for the full workshop documentation :)
 
 ### Examples
 
