@@ -2,20 +2,20 @@
   SD card basic file example
   https://www.arduino.cc/en/Reference/SD
 
- This example shows how to create and destroy an SD card file
- The circuit:
- * SD card attached to SPI bus as follows:
- ** MOSI - D7 - 13
- ** MISO - D6 - 12
- ** CLK  - D5 - 14
- ** CS   - D8 - 15
+  This example shows how to create and destroy an SD card file
+  The circuit:
+  * SD card attached to SPI bus as follows:
+  ** MOSI - D7 - 13
+  ** MISO - D6 - 12
+  ** CLK  - D5 - 14
+  ** CS   - D8 - 15
 
- SPI Ref: https://www.arduino.cc/en/Reference/SPI
+  SPI Ref: https://www.arduino.cc/en/Reference/SPI
 
- The ESP8266 has 2 SPI interfaces (called "SPI" and "HSPI" in the source code
- and the pin descriptions). The SPI register header file and the source code
- suggest that both interfaces have identical register sets, which are just
- located at different base addresses.
+  The ESP8266 has 2 SPI interfaces (called "SPI" and "HSPI" in the source code
+  and the pin descriptions). The SPI register header file and the source code
+  suggest that both interfaces have identical register sets, which are just
+  located at different base addresses.
  */
 
 #include <Arduino.h>
@@ -77,6 +77,6 @@ void setup ()
   }
 }
 
-void loop()
+void loop ()
 {
 }
