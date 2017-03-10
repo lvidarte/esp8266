@@ -2,13 +2,13 @@
 
 ### Build the firmware
 
-Move to src/c++/ota directory and exec
+Move to `src/c++/ota` directory and exec
 
     $ bin/build.sh
 
 ### Run OTA server
 
-Move to src/c++/ota directory and exec
+Move to `src/c++/ota` directory and exec
 
     $ bin/server.sh
 
