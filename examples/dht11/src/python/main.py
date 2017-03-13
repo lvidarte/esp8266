@@ -1,28 +1,39 @@
 from machine import Pin
 from dht import DHT11
-import requests
+import urequests
+import time
 
-aio_url = 'https://io.adafruit.com/api/feeds/%s/data'
-aio_key = 'b9f5ba0712f91deb9eefdc1faf5dee06415d380f'
+
+PHANT_HOST  = "192.168.43.217:8080"
+PUBLIC_KEY  = "4YkYvXgMBPFlE1DZZPKJhdVm9W4"
+PRIVATE_KEY = "qOaO3mXpgZUl372VVqpRhxaLmBe"
+
 
 d = DHT11(Pin(14))
 
 
-def log_data():
+def read_sensor():
     d.measure()
-    send_data('temperature', d.temperature())
-    send_data('humidity', d.humidity())
+    return {
+        "temperature": d.temperature(),
+        "humidity": d.humidity()
+    }
 
-def send_data(key, value):
-    url = aio_url % key
-    json = {'value': value}
-    headers = {'x-aio-key': aio_key}
-    r = requests.post(url, json=json, headers=headers)
-    print(key, value, r.status_code)
+def get_query(data):
+    return "&".join(["%s=%.1f" % (k, v) for k, v in data.items()])
+
+def phant_log(data):
+    url = "http://%s/input/%s?%s" % (PHANT_HOST, PUBLIC_KEY, get_query(data))
+    headers = {"Phant-Private-Key": PRIVATE_KEY}
+    response = urequests.post(url, headers=headers)
+    print(url, response.status_code, response.reason)
+    response.close()
 
 def run():
-    import time
     while True:
-        log_data()
+        data = read_sensor()
+        print("Sending data", data)
+        phant_log(data)
         time.sleep(60)
+
 

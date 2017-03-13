@@ -6,6 +6,8 @@ if [ ! -f bin/ampy ]; then
 fi
 
 PORT=${1:-/dev/ttyUSB0}
+echo "Using $PORT"
 
-bin/ampy -p $PORT put boot.py main.py requests.py
-
+for FILE in boot.py main.py; do
+    bin/ampy -p $PORT put $FILE
+done
