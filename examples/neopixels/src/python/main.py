@@ -3,11 +3,8 @@ from neopixel import NeoPixel
 import time
 
 
-np = NeoPixel(Pin(14), 10)
-
-
-def demo(np):
-    n = np.n
+def demo(pin, n):
+    np = NeoPixel(Pin(pin), n)
 
     # cycle
     for i in range(4 * n):
