@@ -8,6 +8,6 @@ do
         then
             mkdir "examples/$DIR/src/python/bin"
         fi
-        ln -fs $(pwd)/bin/micropython-shell.sh examples/$DIR/src/python/bin/shell.sh
+        ln -fs $(pwd)/bin/micropython-shell.sh examples/$DIR/src/python/bin/shell
     fi
 done

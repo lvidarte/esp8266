@@ -1,5 +1,19 @@
 #!/bin/bash
 
+function create_ampy_link
+{
+    local DIR=$1
+
+    if [ -d ../examples/$DIR/src/python ]
+    then
+        if [ ! -d ../examples/$DIR/src/python/bin ]
+        then
+            mkdir ../examples/$DIR/src/python/bin
+        fi
+        ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/$DIR/src/python/bin/ampy
+    fi
+}
+
 cd bin && \
     mkdir -p envs && \
     cd envs && \
@@ -9,7 +23,5 @@ cd bin && \
     deactivate && \
     cd .. && \
     ln -fs $(pwd)/envs/ampy/bin/ampy && \
-    ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/rgb-lamp/src/python/bin/ampy && \
-    ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/dht11/src/python/bin/ampy && \
-    ln -fs $(pwd)/envs/ampy/bin/ampy ../examples/ap/src/python/bin/ampy && \
+    for DIR in `ls -1 ../examples`; do create_ampy_link $DIR; done && \
     cd ..
