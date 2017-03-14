@@ -2,3 +2,5 @@ esptool
 ampy
 esp8266-20170108-v1.8.7.bin
 .travis.yml
+python/bin
+shell.sh
