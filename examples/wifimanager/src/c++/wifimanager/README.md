@@ -1,3 +1,6 @@
-# KudosButton
+# WifiManager
 
-![Kudos Fritzing Schematic](https://raw.githubusercontent.com/GlobantIoT/pocs/KudosButton/kudos.png)
+
+Library: https://github.com/tzapu/WiFiManager
+
+Examples: https://github.com/tzapu/WiFiManager/tree/master/examples
