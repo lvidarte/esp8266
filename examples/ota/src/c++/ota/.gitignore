@@ -2,3 +2,5 @@
 .piolibdeps
 firmware
 ota.log
+.clang_complete
+.gcc-flags.json
